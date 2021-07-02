@@ -83,3 +83,5 @@ if __name__ == '__main__':
         word = word.replace(item, uppercaseWords[item])
 
     print(word)
+    
+    main()
