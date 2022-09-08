@@ -2,7 +2,8 @@ import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
-    kotlin("jvm") version "1.4.32"
+    kotlin("jvm") version "1.7.10"
+    kotlin("plugin.serialization") version "1.7.10"
     id("org.openjfx.javafxplugin") version "0.0.8"
     id("com.github.johnrengelman.shadow") version "4.0.2"
     id("org.beryx.jlink") version "2.24.0"
@@ -31,10 +32,13 @@ application {
 dependencies {
     val tornadofxVersion: String by project
     implementation("no.tornado", "tornadofx", tornadofxVersion)
+
+    val kotlinSerializationVersion: String by project
+    implementation("org.jetbrains.kotlinx","kotlinx-serialization-json", kotlinSerializationVersion)
 }
 
 tasks.withType<KotlinCompile> {
-    kotlinOptions.jvmTarget = "1.8"
+    kotlinOptions.jvmTarget = JavaVersion.VERSION_11.majorVersion
 }
 
 tasks.withType<ShadowJar> {
