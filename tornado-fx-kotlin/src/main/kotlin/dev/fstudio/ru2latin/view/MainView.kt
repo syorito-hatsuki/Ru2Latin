@@ -1,6 +1,6 @@
 package dev.fstudio.ru2latin.view
 
-import dev.fstudio.ru2latin.util.MainLogic
+import dev.fstudio.ru2latin.util.Convertor
 import javafx.scene.control.TextArea
 import javafx.scene.layout.Priority
 import tornadofx.*
@@ -19,6 +19,10 @@ class MainView : View() {
                     marginTopBottom(8.0)
                     hgrow = Priority.ALWAYS
                 }
+                setOnKeyPressed {
+                    outputTextArea.text = Convertor.translateTextToLatin(inputTextArea.text)
+                }
+                isWrapText = true
             }
             outputTextArea = textarea {
                 hboxConstraints {
@@ -27,23 +31,10 @@ class MainView : View() {
                     marginTopBottom(8.0)
                     hgrow = Priority.ALWAYS
                 }
+                isWrapText = true
                 isEditable = false
             }
             fitToParentHeight()
-        }
-        button {
-            text = "Convert"
-            fitToParentWidth()
-            action {
-                setOnMouseClicked {
-                    outputTextArea.text = MainLogic.translateTextToLatin(inputTextArea.text)
-                }
-            }
-            vboxConstraints {
-                marginBottom = 8.0
-                marginLeftRight(8.0)
-                vgrow = Priority.ALWAYS
-            }
         }
     }
 }
