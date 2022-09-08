@@ -1,7 +1,7 @@
 # Russian to Latin
 
 ## Description
-Simple app what convert russian text to latin using local vocabulary
+Simple app that convert curilic symbols to latin via local vocabulary
 
 ## Screenshot
 <p align="center">
