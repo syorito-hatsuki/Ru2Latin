@@ -2,7 +2,6 @@ package dev.fstudio.ru2latin.view
 
 import dev.fstudio.ru2latin.util.Convertor
 import javafx.scene.control.TextArea
-import javafx.scene.layout.Priority
 import tornadofx.*
 
 class MainView : View() {
@@ -17,9 +16,8 @@ class MainView : View() {
                     marginLeft = 8.0
                     marginRight = 4.0
                     marginTopBottom(8.0)
-                    hgrow = Priority.ALWAYS
                 }
-                setOnKeyPressed {
+                setOnKeyReleased {
                     outputTextArea.text = Convertor.translateTextToLatin(inputTextArea.text)
                 }
                 isWrapText = true
@@ -29,7 +27,6 @@ class MainView : View() {
                     marginLeft = 4.0
                     marginRight = 8.0
                     marginTopBottom(8.0)
-                    hgrow = Priority.ALWAYS
                 }
                 isWrapText = true
                 isEditable = false
