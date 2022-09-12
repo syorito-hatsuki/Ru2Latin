@@ -1,11 +1,12 @@
 import com.github.jengelman.gradle.plugins.shadow.tasks.ShadowJar
+import org.jetbrains.kotlin.cli.jvm.compiler.findMainClass
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 plugins {
     kotlin("jvm") version "1.7.10"
     kotlin("plugin.serialization") version "1.7.10"
     id("org.openjfx.javafxplugin") version "0.0.8"
-    id("com.github.johnrengelman.shadow") version "4.0.2"
+    id("com.github.johnrengelman.shadow") version "7.1.2"
     id("org.beryx.jlink") version "2.24.0"
     id("application")
 }
@@ -46,6 +47,6 @@ tasks.withType<ShadowJar> {
     manifest { attributes["Main-Class"] = "dev.fstudio.ru2latin.MainKt" }
     dependencies {
         val tornadofxVersion: String by project
-        exclude(dependency("no.tornado:tornadofx:$tornadofxVersion"))
+        dependency("no.tornado:tornadofx:$tornadofxVersion")
     }
 }

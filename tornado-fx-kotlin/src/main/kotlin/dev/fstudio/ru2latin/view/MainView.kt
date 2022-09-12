@@ -17,9 +17,7 @@ class MainView : View() {
                     marginRight = 4.0
                     marginTopBottom(8.0)
                 }
-                setOnKeyReleased {
-                    outputTextArea.text = Convertor.translateTextToLatin(inputTextArea.text)
-                }
+                setOnKeyReleased { outputTextArea.text = Convertor.translateTextToLatin(inputTextArea.text) }
                 isWrapText = true
             }
             outputTextArea = textarea {
