@@ -1,5 +1,6 @@
 :root {
-    --borderPadding: 8px
+    --borderPadding: 8px;
+    --primaryColor: #007FFF;
 }
 
 .container {
@@ -23,5 +24,5 @@
 }
 
 .inputField:focus {
-    border-color: blue;
+    border-color: var(--primaryColor);
 }
