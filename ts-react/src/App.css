@@ -5,7 +5,7 @@
 
 .container {
     display: flex;
-    height: calc(100vh - var(--borderPadding) * 2);
+    height: calc(100dvh - var(--borderPadding) * 2);
     padding: var(--borderPadding);
 }
 
