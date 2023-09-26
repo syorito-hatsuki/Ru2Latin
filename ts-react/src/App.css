@@ -1,0 +1,27 @@
+:root {
+    --borderPadding: 8px
+}
+
+.container {
+    display: flex;
+    height: calc(100vh - var(--borderPadding) * 2);
+    padding: var(--borderPadding);
+}
+
+.spacer {
+    padding-right: var(--borderPadding);
+}
+
+.inputField {
+    flex: 2 1 auto;
+    resize: none;
+    padding: 8px;
+    border: 2px solid #ccc;
+    border-radius: 4px;
+    outline: none;
+    transition: border-color 0.3s ease-in-out;
+}
+
+.inputField:focus {
+    border-color: blue;
+}
