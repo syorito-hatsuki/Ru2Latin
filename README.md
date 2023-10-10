@@ -100,7 +100,7 @@ Distributed under the MIT License. See `LICENSE` for more information.
 [issues-shield]: https://img.shields.io/github/issues/syorito-hatsuki/Ru2Latin.svg?style=for-the-badge
 [issues-url]: https://github.com/syorito-hatsuki/Ru2Latin/issues
 [license-shield]: https://img.shields.io/github/license/syorito-hatsuki/Ru2Latin.svg?style=for-the-badge
-[license-url]: https://github.com/syorito-hatsuki/Ru2Latin/blob/master/LICENSE.txt
+[license-url]: https://github.com/syorito-hatsuki/Ru2Latin/blob/master/LICENSE
 [linkedin-shield]: https://img.shields.io/badge/-LinkedIn-black.svg?style=for-the-badge&logo=linkedin&colorB=555
 [linkedin-url]: https://linkedin.com/in/othneildrew
 [React.js]: https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB
