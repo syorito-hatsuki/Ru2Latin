@@ -1,4 +1,4 @@
-package dev.fstudio.ru2latin.util
+package dev.syoritohatuki.ru2latin.util
 
 object Convertor {
     fun translateTextToLatin(inputString: String): String {
