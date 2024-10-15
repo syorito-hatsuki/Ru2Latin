@@ -33,13 +33,13 @@ jobs:
         
       - name: Set up Node
         run: |
-          cd ./ts-react  # Set the working directory to your React app folder
+          cd ./react-ts  # Set the working directory to your React app folder
           npm install
         shell: bash
 
       - name: Build
         run: |
-          cd ./ts-react  # Set the working directory to your React app folder
+          cd ./react-ts  # Set the working directory to your React app folder
           npm run build
         shell: bash
       
@@ -50,7 +50,7 @@ jobs:
         uses: actions/upload-pages-artifact@v1
         with:
           # Upload dist repository
-          path: './ts-react/dist'
+          path: './react-ts/dist'
       
       - name: Deploy to GitHub Pages
         id: deployment
