@@ -27,7 +27,7 @@ compose.desktop {
         mainClass = "MainKt"
 
         nativeDistributions {
-            targetFormats(TargetFormat.Dmg, TargetFormat.Msi, TargetFormat.Deb)
+            targetFormats(*TargetFormat.values())
             packageName = "compose-desktop-kotlin"
             packageVersion = "1.0.0"
         }
